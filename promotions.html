@@ -3,139 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh-Mart | Staff Promotions Guide</title>
-    <!-- Professional Google Fonts -->
+    <title>Fresh-Mart | Promotions Guide</title>
+
+    <!-- CRITICAL: High-priority font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
+
     <style>
-        /* Base Styling */
-        body {
-            background-color: #0b0b0b; /* True Dark Background */
-            color: #e0e0e0; /* Off-white for better eye comfort */
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+        /* 1. RESET: Forces the background to be black even if the body fails to expand */
+        html, body {
+            background-color: #050505 !important; /* Absolute dark */
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 2. LAYOUT: Professional Container */
+        .main-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
         header {
-            background: linear-gradient(180deg, #1a1a1a 0%, #0b0b0b 100%);
-            padding: 60px 20px;
+            border-bottom: 2px solid #22c55e; /* Fresh-Mart Green */
+            padding-bottom: 20px;
+            margin-bottom: 40px;
             text-align: center;
-            border-bottom: 1px solid #333;
         }
 
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            letter-spacing: -1px;
-            color: #ffffff;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             margin: 0;
-            text-transform: uppercase;
+            letter-spacing: -2px;
+            background: linear-gradient(to bottom, #ffffff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        /* Professional Sections */
-        section {
-            margin-bottom: 50px;
+        /* 3. CARDS: Detailed glass-morphism effect */
+        .guide-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
             padding: 30px;
-            background: #161616;
-            border-radius: 12px;
-            border: 1px solid #222;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .guide-card:hover {
+            border-color: #22c55e;
+            transform: translateY(-5px);
         }
 
         h2 {
-            color: #4ade80; /* Fresh-Mart Green Accent */
-            border-left: 4px solid #4ade80;
-            padding-left: 15px;
-            font-size: 1.8rem;
+            color: #22c55e;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0;
         }
 
-        /* Embed Container */
-        .embed-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            margin-top: 20px;
-            border-radius: 8px;
-            background: #000;
-        }
-
-        .embed-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Staff List / Requirements */
+        /* 4. LISTS: Custom styled markers */
         ul {
             list-style: none;
             padding: 0;
         }
 
         li {
-            padding: 12px 0;
-            border-bottom: 1px solid #222;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
 
         li::before {
-            content: "✓";
-            color: #4ade80;
-            margin-right: 15px;
+            content: "→";
+            color: #22c55e;
+            margin-right: 12px;
             font-weight: bold;
+        }
+
+        /* 5. EMBEDS: Responsive Video Wrapper */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
         }
 
         footer {
             text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
-            color: #666;
+            opacity: 0.5;
+            font-size: 0.8rem;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
+<div class="main-wrapper">
     <header>
-        <h1>Fresh-Mart</h1>
-        <p style="color: #4ade80; font-weight: bold;">STAFF PROMOTIONS PORTAL</p>
+        <h1>FRESH-MART</h1>
+        <p style="color: #888; font-weight: 300;">CORPORATE PROMOTIONS & LEADERSHIP GUIDE</p>
     </header>
 
-    <div class="container">
-        <section>
-            <h2>Promotion Pathway</h2>
-            <p>Welcome to your career growth hub. At Fresh-Mart, we value excellence and leadership. Below are the key milestones required to move from Associate to Team Lead.</p>
-            
-            <ul>
-                <li>Complete Level 2 Inventory Management Training</li>
-                <li>Maintain 95% + Customer Satisfaction Rating</li>
-                <li>Zero safety incidents in current quarter</li>
-                <li>Demonstrated mentorship of new hires</li>
-            </ul>
-        </section>
+    <section class="guide-card">
+        <h2>Leadership Criteria</h2>
+        <p>To qualify for the **Senior Associate** or **Team Lead** position, staff must demonstrate mastery in the following areas:</p>
+        <ul>
+            <li>Advanced Fresh-Cut Safety Protocols (Level 4)</li>
+            <li>Proven efficiency in high-traffic shift management</li>
+            <li>Successful completion of the "Mart-Expert" Digital Literacy test</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Training Video Guide</h2>
-            <p>Watch our internal briefing on the new promotion interview process.</p>
-            <div class="embed-wrapper">
-                <!-- Replace with your actual training video link -->
-                <iframe src="https://www.youtube.com" allowfullscreen></iframe>
-            </div>
-        </section>
-    </div>
+    <section class="guide-card">
+        <h2>Training Modules</h2>
+        <p>Review the mandatory promotion briefing below:</p>
+        <div class="video-container">
+            <!-- Replace this URL with your actual YouTube or Vimeo training link -->
+            <iframe src="https://www.youtube.com" allowfullscreen></iframe>
+        </div>
+    </section>
 
     <footer>
-        &copy; 2026 Fresh-Mart Internal. For authorized personnel only.
+        &copy; 2026 Fresh-Mart Operations Hub | CONFIDENTIAL STAFF RESOURCE
     </footer>
+</div>
 
 </body>
 </html>
