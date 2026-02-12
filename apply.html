@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply | Fresh-Mart Promotions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+
+    <style>
+        /* 1. CORE STYLE (Matches Index) */
+        html, body {
+            background-color: #050505;
+            margin: 0; padding: 0;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 2. NAVIGATION */
+        .navbar {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1000px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center; padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800; color: #22c55e;
+            text-decoration: none; font-size: 1.2rem;
+        }
+
+        .nav-links a {
+            color: #888; text-decoration: none; font-size: 0.85rem;
+            font-weight: 600; margin-left: 25px; text-transform: uppercase;
+        }
+
+        .nav-links a.active { color: #ffffff; border-bottom: 2px solid #22c55e; padding-bottom: 5px; }
+
+        /* 3. APPLICATION LAYOUT */
+        .main-wrapper { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+
+        .section-header { text-align: center; margin-bottom: 50px; }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif; font-size: 3rem;
+            margin: 0; color: #ffffff;
+        }
+
+        /* 4. SOCIAL & EXTERNAL BUTTONS */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-card {
+            background: #111;
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .social-card:hover { border-color: #444; background: #151515; }
+
+        .social-card h3 { font-family: 'Montserrat', sans-serif; margin-top: 0; }
+
+        /* Color Coding for Platforms */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .discord-btn { background: #5865F2; color: white; }
+        .roblox-btn { background: #ffffff; color: black; }
+        .apply-btn { background: #22c55e; color: black; }
+
+        .btn:hover { filter: brightness(1.2); transform: translateY(-2px); }
+
+        /* 5. FORM EMBED WRAPPER */
+        .form-container {
+            background: #111;
+            border-radius: 20px;
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #22c55e;
+        }
+
+        footer { text-align: center; padding: 60px 0; color: #444; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">FRESH-MART</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="apply.html" class="active">Apply</a>
+        </div>
+    </div>
+</nav>
+
+<div class="main-wrapper">
+    <div class="section-header">
+        <h1>JOIN THE TEAM</h1>
+        <p style="color: #22c55e;">Career advancement starts here.</p>
+    </div>
+
+    <!-- Integration Grid -->
+    <div class="grid-container">
+        <div class="social-card">
+            <h3>Discord</h3>
+            <p style="font-size: 0.8rem; color: #888;">Join our communications hub for shift pings & updates.</p>
+            <a href="https://discord.gg" class="btn discord-btn">Join Server</a>
+        </div>
+
+        <div class="social-card">
+            <h3>Roblox</h3>
+            <p style="font-size: 0.8rem; color: #888;">Visit the main Fresh-Mart store and training grounds.</p>
+            <a href="https://www.roblox.com" class="btn roblox-btn">Main Game</a>
+        </div>
+    </div>
+
+    <div class="social-card" style="margin-top: 20px;">
+        <h3 style="color: #22c55e;">Roblox Application Hub</h3>
+        <p style="color: #888;">If you are applying via our automated Roblox center, use the link below.</p>
+        <a href="https://www.roblox.com" class="btn apply-btn">Open Application Center</a>
+    </div>
+
+    <!-- OPTIONAL: Google Forms / Quiz Embed -->
+    <div class="form-container">
+        <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">Or, Submit a Digital Form:</p>
+        <!-- You can embed a Google Form here -->
+        <div style="height: 400px; background: #000; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+            <p style="color: #444;">[Google Form or Quiz Embed Code Here]</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 FRESH-MART OPERATIONS | SECURE APPLICATION PORTAL
+    </footer>
+</div>
+
+</body>
+</html>
