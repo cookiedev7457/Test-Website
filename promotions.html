@@ -3,139 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh-Mart | Staff Promotions Guide</title>
-    <!-- Professional Google Fonts -->
+    <title>Fresh-Mart | Promotions Guide</title>
+
+    <!-- FIXED FONT IMPORT: Specifically calls Inter and Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
+
     <style>
-        /* Base Styling */
-        body {
-            background-color: #0b0b0b; /* True Dark Background */
-            color: #e0e0e0; /* Off-white for better eye comfort */
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+        /* 1. GLOBAL SETUP */
+        html, body {
+            background-color: #050505 !important;
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            color: #e0e0e0;
+            /* Using Inter as the primary professional font */
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+
+        /* 2. NAVIGATION BAR */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: #22c55e;
+            text-decoration: none;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 25px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #22c55e;
+        }
+
+        /* 3. HERO & CONTENT */
+        .main-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
         }
 
         header {
-            background: linear-gradient(180deg, #1a1a1a 0%, #0b0b0b 100%);
-            padding: 60px 20px;
             text-align: center;
-            border-bottom: 1px solid #333;
+            margin-bottom: 60px;
         }
 
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            letter-spacing: -1px;
-            color: #ffffff;
+            font-size: clamp(2.5rem, 6vw, 4rem);
             margin: 0;
+            font-weight: 800;
+            letter-spacing: -2px;
+            color: #ffffff;
+            line-height: 1;
+        }
+
+        .subtitle {
+            color: #22c55e;
+            font-weight: 600;
+            letter-spacing: 3px;
             text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            display: block;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        /* Professional Sections */
-        section {
-            margin-bottom: 50px;
-            padding: 30px;
-            background: #161616;
-            border-radius: 12px;
+        .guide-card {
+            background: #111111;
             border: 1px solid #222;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
         h2 {
-            color: #4ade80; /* Fresh-Mart Green Accent */
-            border-left: 4px solid #4ade80;
-            padding-left: 15px;
-            font-size: 1.8rem;
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
         }
 
-        /* Embed Container */
-        .embed-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            margin-top: 20px;
-            border-radius: 8px;
-            background: #000;
-        }
-
-        .embed-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Staff List / Requirements */
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
+        /* 4. LIST STYLING */
+        ul { list-style: none; padding: 0; }
         li {
-            padding: 12px 0;
+            padding: 15px 0;
             border-bottom: 1px solid #222;
             display: flex;
             align-items: center;
+            font-size: 1.05rem;
         }
-
         li::before {
-            content: "✓";
-            color: #4ade80;
+            content: "→";
+            color: #22c55e;
             margin-right: 15px;
             font-weight: bold;
         }
 
+        /* 5. VIDEO EMBED */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
         footer {
             text-align: center;
-            padding: 40px;
-            font-size: 0.9rem;
-            color: #666;
+            padding: 60px 0;
+            color: #444;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">FRESH-MART</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="modules.html">Modules</a>
+            <a href="apply.html">Apply</a>
+        </div>
+    </div>
+</nav>
+
+<div class="main-wrapper">
     <header>
-        <h1>Fresh-Mart</h1>
-        <p style="color: #4ade80; font-weight: bold;">STAFF PROMOTIONS PORTAL</p>
+        <h1>PROMOTIONS</h1>
+        <span class="subtitle">Official Staff Leadership Portal</span>
     </header>
 
-    <div class="container">
-        <section>
-            <h2>Promotion Pathway</h2>
-            <p>Welcome to your career growth hub. At Fresh-Mart, we value excellence and leadership. Below are the key milestones required to move from Associate to Team Lead.</p>
-            
-            <ul>
-                <li>Complete Level 2 Inventory Management Training</li>
-                <li>Maintain 95% + Customer Satisfaction Rating</li>
-                <li>Zero safety incidents in current quarter</li>
-                <li>Demonstrated mentorship of new hires</li>
-            </ul>
-        </section>
+    <section class="guide-card">
+        <h2>Leadership Criteria</h2>
+        <p>To advance at Fresh-Mart, staff must master these core competencies:</p>
+        <ul>
+            <li>Advanced Fresh-Cut Safety Protocols (Level 4)</li>
+            <li>High-traffic inventory management mastery</li>
+            <li>Successful "Mart-Expert" Digital Literacy certification</li>
+        </ul>
+    </section>
 
-        <section>
-            <h2>Training Video Guide</h2>
-            <p>Watch our internal briefing on the new promotion interview process.</p>
-            <div class="embed-wrapper">
-                <!-- Replace with your actual training video link -->
-                <iframe src="https://www.youtube.com" allowfullscreen></iframe>
-            </div>
-        </section>
-    </div>
+    <section class="guide-card">
+        <h2>Training Briefing</h2>
+        <div class="video-container">
+            <!-- Replace with your specific YouTube training ID -->
+            <iframe src="https://www.youtube.com" allowfullscreen></iframe>
+        </div>
+    </section>
 
     <footer>
-        &copy; 2026 Fresh-Mart Internal. For authorized personnel only.
+        &copy; 2026 FRESH-MART OPERATIONS HUB | AUTHORIZED PERSONNEL ONLY
     </footer>
+</div>
 
 </body>
 </html>
