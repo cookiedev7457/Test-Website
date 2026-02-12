@@ -1,151 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh-Mart | Promotions Guide</title>
-
-    <!-- CRITICAL: High-priority font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-
-    <style>
-        /* 1. RESET: Forces the background to be black even if the body fails to expand */
-        html, body {
-            background-color: #050505 !important; /* Absolute dark */
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* 2. LAYOUT: Professional Container */
-        .main-wrapper {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        header {
-            border-bottom: 2px solid #22c55e; /* Fresh-Mart Green */
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin: 0;
-            letter-spacing: -2px;
-            background: linear-gradient(to bottom, #ffffff, #888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* 3. CARDS: Detailed glass-morphism effect */
-        .guide-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 25px;
-            transition: transform 0.3s ease;
-        }
-
-        .guide-card:hover {
-            border-color: #22c55e;
-            transform: translateY(-5px);
-        }
-
-        h2 {
-            color: #22c55e;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 0;
-        }
-
-        /* 4. LISTS: Custom styled markers */
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: flex-start;
-        }
-
-        li::before {
-            content: "→";
-            color: #22c55e;
-            margin-right: 12px;
-            font-weight: bold;
-        }
-
-        /* 5. EMBEDS: Responsive Video Wrapper */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            margin-top: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            border: 0;
-        }
-
-        footer {
-            text-align: center;
-            opacity: 0.5;
-            font-size: 0.8rem;
-            margin-top: 50px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="main-wrapper">
-    <header>
-        <h1>FRESH-MART</h1>
-        <p style="color: #888; font-weight: 300;">CORPORATE PROMOTIONS & LEADERSHIP GUIDE</p>
-    </header>
-
-    <section class="guide-card">
-        <h2>Leadership Criteria</h2>
-        <p>To qualify for the **Senior Associate** or **Team Lead** position, staff must demonstrate mastery in the following areas:</p>
-        <ul>
-            <li>Advanced Fresh-Cut Safety Protocols (Level 4)</li>
-            <li>Proven efficiency in high-traffic shift management</li>
-            <li>Successful completion of the "Mart-Expert" Digital Literacy test</li>
-        </ul>
-    </section>
-
-    <section class="guide-card">
-        <h2>Training Modules</h2>
-        <p>Review the mandatory promotion briefing below:</p>
-        <div class="video-container">
-            <!-- Replace this URL with your actual YouTube or Vimeo training link -->
-            <iframe src="https://www.youtube.com" allowfullscreen></iframe>
+<nav class="main-nav">
+    <div class="nav-container">
+        <div class="nav-logo">FRESH-MART</div>
+        <div class="nav-links">
+            <!-- Ensure filenames match your GitHub files exactly -->
+            <a href="index.html" class="nav-item active">Home</a>
+            <a href="requirements.html" class="nav-item">Requirements</a>
+            <a href="application.html" class="nav-item">Apply Now</a>
+            <a href="contact.html" class="nav-item">HR Support</a>
         </div>
-    </section>
+    </div>
+</nav>
 
-    <footer>
-        &copy; 2026 Fresh-Mart Operations Hub | CONFIDENTIAL STAFF RESOURCE
-    </footer>
-</div>
+<header class="hero-section">
+    <div class="header-content">
+        <span class="badge">Internal Career Portal</span>
+        <h1>PROMOTIONS GUIDE</h1>
+        <div class="divider"></div>
+        <p>Elevating our team from the floor to leadership.</p>
+    </div>
+</header>
 
-</body>
-</html>
+<style>
+    /* NEW NAVIGATION STYLES */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        background: rgba(11, 11, 11, 0.8); /* Translucent Black */
+        backdrop-filter: blur(10px); /* Modern Glass Effect */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .nav-logo {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        color: #22c55e;
+        letter-spacing: 1px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-item {
+        text-decoration: none;
+        color: #888;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s ease;
+    }
+
+    .nav-item:hover, .nav-item.active {
+        color: #ffffff;
+    }
+
+    /* ENHANCED HERO HEADER */
+    .hero-section {
+        padding: 140px 20px 60px 20px; /* Space for fixed nav */
+        text-align: center;
+        background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+    }
+
+    .badge {
+        background: rgba(34, 197, 94, 0.1);
+        color: #22c55e;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .divider {
+        width: 60px;
+        height: 4px;
+        background: #22c55e;
+        margin: 20px auto;
+    }
+
+    /* Adjust main content for fixed nav */
+    .main-wrapper {
+        margin-top: 20px;
+    }
+</style>
